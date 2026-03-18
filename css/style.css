@@ -1,3 +1,7 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 /* Hero section */
 .hero {
   min-height: 60vh;
@@ -12,9 +16,75 @@ html {
 /* Card hover effect */
 .card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+.resource-card-available {
+  border: 2px solid transparent;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.resource-card-available:hover {
+  transform: translateY(-5px);
+  border-color: #0d6efd;
+  box-shadow: 0 0.5rem 1.5rem rgba(13, 110, 253, 0.15) !important;
+}
+
+.resource-card-available:hover .guide-link {
+  color: #0d6efd !important;
+  text-decoration: underline !important;
+}
+
+.guide-link {
+  color: #6c757d;
+  transition: color 0.2s ease;
+}
+
+.resource-card-unavailable {
+  opacity: 0.6;
+  filter: grayscale(1);
+  background-color: #f4f4f4;
+  cursor: not-allowed;
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #0d6efd;
+}
+
+/* Icon Box Styling */
+.icon-box {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: #f0f7ff;
+  color: #0d6efd;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.resource-card-unavailable .icon-box {
+  background-color: #e9ecef;
+  color: #6c757d;
 }
