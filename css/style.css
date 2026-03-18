@@ -10,6 +10,10 @@ body {
   overflow: hidden;
 }
 
+.hero-sub {
+  min-height: 30vh;
+}
+
 #hero-canvas {
   position: absolute;
   top: 0;
@@ -31,6 +35,34 @@ body {
 
 .hero p {
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.5);
+  content: "›";
+}
+
+.breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.breadcrumb-item a:hover {
+  color: #fff;
+}
+
+.breadcrumb-item.active {
+  color: #fff;
+  font-weight: 400;
 }
 
 /* Smooth scroll */
