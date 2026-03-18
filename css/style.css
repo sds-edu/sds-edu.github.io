@@ -1,3 +1,7 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 /* Hero section */
 .hero {
   min-height: 60vh;
@@ -12,9 +16,15 @@ html {
 /* Card hover effect */
 .card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.nav-link {
+  font-weight: 600;
 }
