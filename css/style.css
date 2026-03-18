@@ -37,37 +37,24 @@ body {
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Breadcrumbs */
-.breadcrumb {
-  background: transparent;
-  padding: 0;
-  margin-bottom: 1.5rem;
+/* Hero Button Custom Hover */
+.hero .btn-primary {
+  transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1),
+              box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1),
+              background-color 0.3s ease;
+  position: relative;
+  border: none;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.5);
-  content: "›";
-}
-
-.breadcrumb-item a {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-.breadcrumb-item a:hover {
+.hero .btn-primary:hover {
+  transform: scale(1.08);
+  background-color: #0d6efd; /* Keep original blue */
+  box-shadow: 0 0 25px 5px rgba(13, 110, 253, 0.4);
   color: #fff;
 }
 
-.breadcrumb-item.active {
-  color: #fff;
-  font-weight: 400;
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+.hero .btn-primary:active {
+  transform: scale(0.98);
 }
 
 /* Card hover effect */
